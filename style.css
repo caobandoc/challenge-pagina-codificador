@@ -1,0 +1,30 @@
+:root{
+  --height-logo: 40px;
+}
+
+body {
+  background-color: #f3f5fc;
+}
+
+.principal {
+  padding: 6rem 3rem 3rem 3rem;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .principal {
+    padding-left: calc(3.667% + var(--height-logo));
+  }
+}
+
+.logo {
+  height: var(--height-logo);
+  position: absolute;
+  left: 3.667%;
+  top: 3.743%;
+}
+
+.respuesta {
+  background-color: white;
+}
