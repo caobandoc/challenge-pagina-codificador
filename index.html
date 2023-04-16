@@ -19,7 +19,7 @@
   <div class="principal">
 
     <div class="columnas entrada">
-      <textarea placeholder="Ingrese el texto aqui"></textarea>
+      <textarea id="text" placeholder="Ingrese el texto aqui"></textarea>
 
       <div class="acciones">
 
@@ -28,23 +28,24 @@
           <p>Solo letras minúsculas y sin acentos</p>
         </div>
         <div class="botones">
-          <button type="button" class="btn-primary">Encriptar</button>
-          <button type="button" class="btn-secondary">Desencriptar</button>
+          <button id="btn-encrypt" type="button" class="btn-primary">Encriptar</button>
+          <button id="btn-decrypt" type="button" class="btn-secondary">Desencriptar</button>
         </div>
 
       </div>
     </div>
 
     <div class="columnas respuesta">
-      <div class="notfound">
+      <div id="not-found" class="notfound">
         <img src="assets/notfound.svg" alt="notfound">
         <h3>Ningún mensaje fue encontrado</h3>
         <p>Ingrese el texto que desees encriptar o desencriptar</p>
       </div>
+      <div id="response" class="response"></div>
     </div>
 
   </div>
-
+  <script src="index.js"></script>
 </body>
 
 </html>
