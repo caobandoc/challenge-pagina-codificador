@@ -14,13 +14,24 @@ function decrypt() {
   responseShow(desencriptar(text));
 }
 
+function copy(){
+  const text = document.getElementById("response").innerText;
+  navigator.clipboard.writeText(text);
+}
+
 function responseShow(response) {
   const containerNotFound = document.getElementById("not-found");
   containerNotFound.style.display = "none";
 
-  const responseContainer = document.getElementById("response");
-  responseContainer.style.display = "block";
-  responseContainer.innerHTML = `<p>${response}</p>`;
+  const responseContainer = document.getElementById("respuesta");
+  responseContainer.style.display = "flex";
+  responseContainer.innerHTML = `
+  <p id="response">${response}</p>
+  <button id="btn-copy" type="button" class="btn-copy">Copiar</button>
+  `;
+
+  const btnCopy = document.getElementById("btn-copy");
+  btnCopy.addEventListener("click", copy);
 }
 
 const reglaA = ["a", "e", "i", "o", "u"];
@@ -62,7 +73,7 @@ function desencriptar2(text) {
       } else {
         textDesencriptado += text[i];
       }
-    }else{
+    } else {
       textDesencriptado += text[i];
     }
   }
