@@ -135,6 +135,7 @@ textarea:focus {
   overflow: hidden;
   overflow-y: overlay;
   overflow-wrap: break-word;
+  margin-bottom: var(--font-size);
 }
 
 .response p::-webkit-scrollbar {
@@ -147,7 +148,7 @@ textarea:focus {
   border-radius: 24px;
   border: 1px solid;
   font-size: 16px;
-  background-color: var(--secondary);
+  background-color: white;
   border-color: var(--primary);
   color: var(--primary);
 }
