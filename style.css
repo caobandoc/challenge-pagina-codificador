@@ -136,3 +136,18 @@ textarea:focus {
   color: #495057;
   font-size: 24px;
 }
+
+/* Para pantallas de hasta 480px de ancho (móviles) */
+@media only screen and (max-width: 480px) {
+  /* Estilos para pantallas móviles */
+}
+
+/* Para pantallas de hasta 768px de ancho (tablets) */
+@media only screen and (max-width: 768px) {
+  /* Estilos para pantallas de tablet */
+}
+
+/* Para pantallas de más de 1024px de ancho (escritorio) */
+@media only screen and (min-width: 1024px) {
+  /* Estilos para pantallas de escritorio */
+}
