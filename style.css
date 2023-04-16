@@ -29,14 +29,11 @@ body {
   height: 100%;
 }
 
-.principal .columnas {
-  height: 100%;
-}
-
 .entrada {
   width: calc(100% / 3 * 2);
   box-sizing: border-box;
   padding-right: 30px;
+  height: 100%;
 }
 
 textarea {
@@ -101,6 +98,7 @@ textarea:focus {
   border-radius: 32px;
   padding: 32px;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .respuesta .notfound {
@@ -128,7 +126,7 @@ textarea:focus {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: overlay;
   overflow-wrap: break-word;
 }
 
@@ -136,3 +134,44 @@ textarea:focus {
   color: #495057;
   font-size: 24px;
 }
+
+/* Para pantallas de hasta 480px de ancho (móviles) */
+@media only screen and (max-width: 480px) {
+  /* Estilos para pantallas móviles */
+}
+
+/* Para pantallas de hasta 768px de ancho (tablets) */
+@media only screen and (max-width: 768px) {
+  /* Estilos para pantallas de tablet */
+  .principal {
+    display: block;
+    overflow-y: scroll;
+  }
+
+  .entrada {
+    padding-right: 0px;
+    padding-bottom: 64px;
+    width: 100%;
+    height: 80%;
+  }
+
+  .respuesta{
+    display: flex;
+    width: 100%;
+    min-height: 20%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .notfound img{
+    display: none;
+  }
+
+  .response{
+    height: auto;
+    overflow: unset;
+    overflow-y: unset;
+  }
+}
+
