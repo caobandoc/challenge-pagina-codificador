@@ -153,17 +153,16 @@ textarea:focus {
   color: var(--primary);
 }
 
-/* Para pantallas de hasta 480px de ancho (móviles) */
-@media only screen and (max-width: 480px) {
-  /* Estilos para pantallas móviles */
-}
-
 /* Para pantallas de hasta 768px de ancho (tablets) */
 @media only screen and (max-width: 768px) {
   /* Estilos para pantallas de tablet */
   .principal {
     display: block;
     overflow-y: scroll;
+  }
+
+  .principal textarea {
+    padding-top: 50px;
   }
 
   .entrada {
@@ -190,5 +189,31 @@ textarea:focus {
     height: auto;
     overflow: unset;
     overflow-y: unset;
+  }
+}
+
+/* Para pantallas de hasta 480px de ancho (móviles) */
+@media only screen and (max-width: 480px) {
+  .principal {
+    display: block;
+    overflow-y: scroll;
+    height: auto;
+  }
+
+  .entrada textarea{
+    height: 200px;
+  }
+
+  .acciones {
+    height: auto;
+  }
+
+  .botones {
+    display: block;
+  }
+
+  .botones button {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
